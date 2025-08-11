@@ -18,11 +18,27 @@
       </li>
       <li>
         <p>
-          It has an analytic continuation to the entire complex plane except when <m>N = 1, \chi = \mathds{1}</m> in which case it has a meromorphic continuation with a simple pole (<m> s = 1, \text{res} = 1</m>).
+          It has an analytic continuation to the entire complex plane except when <m>N = 1, \chi = \unicode{x1D7D9}</m> in which case it has a meromorphic continuation with a simple pole (<m> s = 1, \text{res} = 1</m>).
         </p>
       </li>
     </ol>
   </p>
+  The zeta function satisfies a few functional equations which are stated below (without proofs)
+  <ol>
+    <li>
+      <p>
+        <m>\Lambda(\chi,s) = (\frac{\pi}{N})^{-\frac{1}{2}(s + \sigma)}\Gamma(\frac{1}{2}(s + \sigma))L(\chi,s)</m> 
+
+      </p>
+    </li>
+    <li>
+      <p>
+        <m>\Lambda(\chi,s) = \frac{\tau(x)}{i^{\sigma}N^{\frac{1}{2}}}\Lambda(\overline{\chi},1-s)</m>
+
+      </p>
+    </li>
+  </ol>
+  where 
 
 
 
