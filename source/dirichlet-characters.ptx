@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="dirichlet-characters" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Dirichlet Characters and L-Functions</title>
+
+  <p> Let <m>N \in \mathbb{N}</m> . Let <m>\chi:(\mathbb{Z}/N\mathbb{Z})^{\times} \to \mathbb{C}^{\times}</m> be a primitive dirichlet character (i.e it doesn't factor through <m>(\mathbb{Z}/m\mathbb{Z})^{\times}</m>) through any proper divisor <m>N</m>. 
+  We can define the L-function of <m>\chi</m> as follows: </p>
+  <p>
+    <m> L(s,\chi) = \sum_{n = 1}^{\infty} \frac{\chi(n)}{n^s} = \prod_{p \mid N} \left( 1 - \frac{\chi(p)}{p^s} \right)^{-1} \prod_{p \nmid N} \left( 1 - \frac{\chi(p)}{p^s} \right)^{-1} </m>
+  </p>
+  <p>
+    This series has two interesting properties:
+    <ol>
+      <li>
+        <p>
+          It converges absolutely and uniformly for <m>\text{Re}(s) \geq 1 + \epsilon</m> for any fixed <m>\epsilon > 0</m>.
+        </p>
+      </li>
+      <li>
+        <p>
+          It has an analytic continuation to the entire complex plane except when <m>N = 1, \chi = \mathds{1}</m> in which case it has a meromorphic continuation with a simple pole (<m> s = 1, \text{res} = 1</m>).
+        </p>
+      </li>
+    </ol>
+  </p>
+
+
+
+</section>

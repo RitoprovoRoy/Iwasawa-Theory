@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="Introduction" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Introduction</title>
+
+  <introduction>
+    <p> We overview some facts and setting for the remainder of the notes. </p>
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="./dirichlet-characters.ptx" />
+
+</chapter>
