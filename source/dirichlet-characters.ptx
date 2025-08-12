@@ -3,122 +3,123 @@
 <section xml:id="dirichlet-characters" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Dirichlet Characters and L-Functions</title>
 
-  <p> Let <m>N \in \mathbb{N}</m> . Let <m>\chi:(\mathbb{Z}/N\mathbb{Z})^{\times} \to \mathbb{C}^{\times}</m> be a primitive dirichlet character (i.e it doesn't factor through <m>(\mathbb{Z}/m\mathbb{Z})^{\times}</m>) through any proper divisor <m>N</m>. 
-  We can define the L-function of <m>\chi</m> as follows: </p>
   <p>
-    <m> L(s,\chi) = \sum_{n = 1}^{\infty} \frac{\chi(n)}{n^s} = \prod_{p \mid N} \left( 1 - \frac{\chi(p)}{p^s} \right)^{-1} \prod_{p \nmid N} \left( 1 - \frac{\chi(p)}{p^s} \right)^{-1} </m>
+    Let <m>N \in \mathbb{N}</m>. Let <m>\chi:(\mathbb{Z}/N\mathbb{Z})^{\times} \to \mathbb{C}^{\times}</m> be a primitive Dirichlet character (i.e., it does not factor through <m>(\mathbb{Z}/m\mathbb{Z})^{\times}</m> for any proper divisor <m>m</m> of <m>N</m>).
+    We can define the L-function of <m>\chi</m> as follows:
+  </p>
+  <p>
+    <m>
+      L(s,\chi) = \sum_{n = 1}^{\infty} \frac{\chi(n)}{n^s} = \prod_{p} \left( 1 - \frac{\chi(p)}{p^s} \right)^{-1}
+    </m>
   </p>
   <p>
     This series has two interesting properties:
-    <ol>
-      <li>
-        <p>
-          It converges absolutely and uniformly for <m>\text{Re}(s) \geq 1 + \epsilon</m> for any fixed <m>\epsilon > 0</m>.
-        </p>
-      </li>
-      <li>
-        <p>
-          It has an analytic continuation to the entire complex plane except when <m>N = 1, \chi = \unicode{x1D7D9}</m> in which case it has a meromorphic continuation with a simple pole (<m> s = 1, \text{res} = 1</m>).
-        </p>
-      </li>
-    </ol>
   </p>
-  The zeta function satisfies a few functional equations which are stated below (without proofs)
   <ol>
     <li>
       <p>
-        <m>\Lambda(\chi,s) = (\frac{\pi}{N})^{-\frac{1}{2}(s + \sigma)}\Gamma(\frac{1}{2}(s + \sigma))L(\chi,s)</m> 
-
+        It converges absolutely and uniformly for <m>\text{Re}(s) \geq 1 + \epsilon</m> for any fixed <m>\epsilon > 0</m>.
       </p>
     </li>
     <li>
       <p>
-        <m>\Lambda(\chi,s) = \frac{\tau(x)}{i^{\sigma}N^{\frac{1}{2}}}\Lambda(\overline{\chi},1-s)</m>
-
+        It has an analytic continuation to the entire complex plane except when <m>N = 1</m> and <m>\chi</m> is the trivial character, in which case it has a meromorphic continuation with a simple pole at <m>s = 1</m> with residue 1.
+      </p>
+    </li>
+  </ol>
+  <p>
+    The zeta function satisfies a few functional equations which are stated below (without proofs):
+  </p>
+  <ol>
+    <li>
+      <p>
+        <m>\Lambda(\chi,s) = \left(\frac{\pi}{N}\right)^{-\frac{1}{2}(s + \sigma)}\Gamma\left(\frac{1}{2}(s + \sigma)\right)L(\chi,s)</m>
+      </p>
+    </li>
+    <li>
+      <p>
+        <m>\Lambda(\chi,s) = \frac{\tau(\chi)}{i^{\sigma}N^{1/2}}\Lambda(\overline{\chi},1-s)</m>
       </p>
     </li>
   </ol>
   <p>
     where we have
-  </p> 
+  </p>
   <p>
     <m>
       \sigma = \begin{cases}
-                0 \:\: \text{if } \chi(-1) = 1 \\
-                1 \:\: \text{if } \chi(-1) = -1
+                0 & \text{if } \chi(-1) = 1 \\
+                1 & \text{if } \chi(-1) = -1
                 \end{cases}
     </m>
   </p>
   <p>
-    and the Gauss Sum
+    and the Gauss sum
   </p>
   <p>
-    <m>\tau(x) = \sum_{m = 1}^N \chi(m) e^{\frac{2\pi i m}{N}}</m> (Gauss Sum)
+    <m>\tau(\chi) = \sum_{m = 1}^N \chi(m) e^{\frac{2\pi i m}{N}}</m> (Gauss sum)
   </p>
-  <p>and clearly <m>|\tau(x)| = \sqrt{N}</m></p>.
+  <p>
+    and clearly <m>|\tau(\chi)| = \sqrt{N}</m>.
+  </p>
   <p>
     As a consequence we have
   </p>
+  <ol>
+    <li>
+      <p>
+        <m>L(\chi,1-n) = 0 \quad \text{if} \quad \chi(-1) \neq (-1)^n</m>
+      </p>
+    </li>
+    <li>
+      <p>
+        <m>L(\chi,1 - n) \neq 0 \quad \text{if} \quad \chi(-1) = (-1)^n</m>
+      </p>
+    </li>
+  </ol>
   <p>
-    <ol>
-      <li>
-        <p>
-          <m>L(\chi,1-n) = 0 \:\: \text{if} \:\: \chi(-1) \neq (-1)^n</m>
-        </p>
-      </li>
-      <li>
-        <p>
-          <m>L(\chi,1 - n) \neq 0 \:\: \text{if} \:\: \chi(-1) = (-1)^n</m>
-        </p>
-      </li>
-    </ol>
+    where <m>n \in \mathbb{N}</m>.
   </p>
   <p>
-    where <m>n \in \mathbb{N}</m>
+    An important fact relating L-functions to Bernoulli numbers is:
   </p>
   <p>
-    An important fact relating L-functions to Bernoulli numbers is
+    For <m>n \geq 0</m> and <m>\chi(-1) = (-1)^n</m> we have
+    <m>L(\chi,1-n) = -\frac{B_{n,\chi}}{n}</m> where
   </p>
   <p>
-    for <m>n \geq 0, \:\: \chi(-1) = (-1)^n</m> we have
-    <p>
-      <m>L(\chi,1-n) = -\frac{B_{n,\chi}}{n}</m> where
-    </p>
-    <p>
-      <m>\sum_{n = 0}^{\infty} \frac{B_{n,\chi}}{n1}t^n = \sum_{a = 1}^{N} \frac{\chi(a)te^{at}}{e^{Nt} - 1}</m>(Formal identity)
-    </p>
-    <p>
-      In particular, <m>L(\chi,1-n) \in \mathbb{Q}(\chi) = \text{ field obtained by adjoining the values of }\chi\text{ to }\mathbb{Q}</m>
-    </p>
-    <p>
-      , we end up with algebraic numbers.
-    </p>
+    <m>
+      \sum_{n = 0}^{\infty} \frac{B_{n,\chi}}{n!}t^n = \sum_{a = 1}^{N} \frac{\chi(a)te^{at}}{e^{Nt} - 1}
+    </m>
+    (Formal identity)
   </p>
+  <p>
+    In particular, <m>L(\chi,1-n) \in \mathbb{Q}(\chi)</m>, the field obtained by adjoining the values of <m>\chi</m> to <m>\mathbb{Q}</m>, so we end up with algebraic numbers.
+  </p>
+
   <subsection>
     <title>An Important Example</title>
-    We give a few examples
-  <p>
-    For <m>\chi(-1) = -1</m>,
     <p>
+      For <m>\chi(-1) = -1</m>,
       <m>L(\chi,0) = -\frac{1}{N}\sum_{a = 1}^{N} \chi(a)a</m>
     </p>
-  </p>
   </subsection>
+
   <subsection>
-  <title>Another Example</title>
-  <p>
-    Let <m>p</m> be an odd prime, <m>\zeta_p</m> be primitive <m>p^{\text{th}}</m>-root of unity.
-  </p>
-  <p>
-    We know that
-  </p> 
-  <p>
-    <m>G = \text{Gal}(\mathbb{Q}(\zeta_p)/\mathbb{Q}) \cong (\mathbb{Z}/m\mathbb{Z})^{\times}</m> where we have <m>\sigma \longmapsto a, \ni \sigma(\zeta_p) = \zeta_p^a</m>
-  </p>
+    <title>Another Example</title>
+    <p>
+      Let <m>p</m> be an odd prime, <m>\zeta_p</m> a primitive <m>p^{\text{th}}</m>-root of unity.
+    </p>
+    <p>
+      We know that
+    </p>
+    <p>
+      <m>G = \text{Gal}(\mathbb{Q}(\zeta_p)/\mathbb{Q}) \cong (\mathbb{Z}/p\mathbb{Z})^{\times}</m> where <m>\sigma \longmapsto a</m>, with <m>\sigma(\zeta_p) = \zeta_p^a</m>.
+    </p>
+    <p>
+      There exists an embedding
+    </p>
+    <!-- Diagram omitted for PreTeXt compatibility. -->
   </subsection>
-
-  
-
-
 
 </section>
