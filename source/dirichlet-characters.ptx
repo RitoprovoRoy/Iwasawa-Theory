@@ -38,7 +38,80 @@
       </p>
     </li>
   </ol>
-  where we have 
+  <p>
+    where we have
+  </p> 
+  <p>
+    <m>
+      \sigma = \begin{cases}
+                0 \:\: \text{if } \chi(-1) = 1 \\
+                1 \:\: \text{if } \chi(-1) = -1
+                \end{cases}
+    </m>
+  </p>
+  <p>
+    and the Gauss Sum
+  </p>
+  <p>
+    <m>\tau(x) = \sum_{m = 1}^N \chi(m) e^{\frac{2\pi i m}{N}}</m> (Gauss Sum)
+  </p>
+  <p>and clearly <m>|\tau(x)| = \sqrt{N}</m></p>.
+  <p>
+    As a consequence we have
+  </p>
+  <p>
+    <ol>
+      <li>
+        <p>
+          <m>L(\chi,1-n) = 0 \:\: \text{if} \:\: \chi(-1) \neq (-1)^n</m>
+        </p>
+      </li>
+      <li>
+        <p>
+          <m>L(\chi,1 - n) \neq 0 \:\: \text{if} \:\: \chi(-1) = (-1)^n</m>
+        </p>
+      </li>
+    </ol>
+  </p>
+  <p>
+    where <m>n \in \mathbb{N}</m>
+  </p>
+  <p>
+    An important fact relating L-functions to Bernoulli numbers is
+  </p>
+  <p>
+    for <m>n \geq 0, \:\: \chi(-1) = (-1)^n</m> we have
+    <p>
+      <m>L(\chi,1-n) = -\frac{B_{n,\chi}}{n}</m> where
+    </p>
+    <p>
+      <m>\sum_{n = 0}^{\infty} \frac{B_{n,\chi}}{n1}t^n = \sum_{a = 1}^{N} \frac{\chi(a)te^{at}}{e^{Nt} - 1}</m>(Formal identity)
+    </p>
+    <p>
+      In particular, <m>L(\chi,1-n) \in \mathbb{Q}(\chi) = \text{ field obtained by adjoining the values of }\chi\text{ to }\mathbb{Q}</m>
+    </p>
+    <p>
+      , we end up with algebraic numbers.
+    </p>
+  </p>
+  We give a few examples
+  <p>
+    For <m>\chi(-1) = -1</m>,
+    <p>
+      <m>L(\chi,0) = -\frac{1}{N}\sum_{a = 1}^{N} \chi(a)a</m>
+    </p>
+  </p>
+  Yet another example
+  <p>
+    Let <m>p</m> be an odd prime, <m>\zeta_p</m> be primitive <m>p^{\text{th}}</m>-root of unity.
+  </p>
+  <p>
+    We know that
+  </p> 
+  <p>
+    <m>G = \text{Gal}(\mathbb{Q}(\zeta_p)/\mathbb{Q}) \equiv (\mathbb{Z}/m\mathbb{Z})^{\times}</m> where we have <m>\sigma \longmapsto a, \ni \sigma(\zeta_p) = \zeta_p^a</m>
+  </p>
+  
 
 
 
