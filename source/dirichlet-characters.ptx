@@ -4,7 +4,15 @@
   <title>Dirichlet Characters and L-Functions</title>
 
   <p>
-    Let <m>N \in \mathbb{N}</m>. Let <m>\chi:(\mathbb{Z}/N\mathbb{Z})^{\times} \to \mathbb{C}^{\times}</m> be a primitive Dirichlet character (i.e., it does not factor through <m>(\mathbb{Z}/m\mathbb{Z})^{\times}</m> for any proper divisor <m>m</m> of <m>N</m>).
+    Let <m>N \in \mathbb{N}</m>. Let <m>\chi:(\mathbb{Z}/N\mathbb{Z})^{\times} \to \mathbb{C}^{\times}</m> be a primitive Dirichlet character (i.e., it does not factor through <m>(\mathbb{Z}/m\mathbb{Z})^{\times}</m> for any proper divisor <m>m</m> of <m>N</m>). We can extend <m>\chi</m> to a function <m>\chi: \Z \to \mathbb{C}</m> by setting
+    <m>
+      \chi(m) = \begin{cases}
+      \chi(m (\mod N)) \: \text{if } (m,N) = 1\\
+      0 \: \text{if } (m,N) > 1
+    \end{cases}
+    </m>
+  </p>
+  <p>
     We can define the L-function of <m>\chi</m> as follows:
   </p>
   <p>
@@ -33,12 +41,16 @@
   <ol>
     <li>
       <p>
-        <m>\Lambda(\chi,s) = \left(\frac{\pi}{N}\right)^{-\frac{1}{2}(s + \sigma)}\Gamma\left(\frac{1}{2}(s + \sigma)\right)L(\chi,s)</m>
+        <m>
+          \Lambda(\chi,s) = \left(\frac{\pi}{N}\right)^{-\frac{1}{2}(s + \sigma)}\Gamma\left(\frac{1}{2}(s + \sigma)\right)L(\chi,s)
+        </m>
       </p>
     </li>
     <li>
       <p>
-        <m>\Lambda(\chi,s) = \frac{\tau(\chi)}{i^{\sigma}N^{1/2}}\Lambda(\overline{\chi},1-s)</m>
+        <m>
+          \Lambda(\chi,s) = \frac{\tau(\chi)}{i^{\sigma}N^{1/2}}\Lambda(\overline{\chi},1-s)
+        </m>
       </p>
     </li>
   </ol>
@@ -48,9 +60,9 @@
   <p>
     <m>
       \sigma = \begin{cases}
-                0 & \text{if } \chi(-1) = 1 \\
-                1 & \text{if } \chi(-1) = -1
-                \end{cases}
+      0 \: \text{if } \chi(-1) = 1 \\
+      1 \: \text{if } \chi(-1) = -1
+      \end{cases}
     </m>
   </p>
   <p>
@@ -100,8 +112,40 @@
   <subsection>
     <title>An Important Example</title>
     <p>
-      For <m>\chi(-1) = -1</m>,
-      <m>L(\chi,0) = -\frac{1}{N}\sum_{a = 1}^{N} \chi(a)a</m>
+      For <m>\chi(-1) = -1</m>, we have
+      <m>L(\chi,0) = -\frac{1}{N}\sum_{a = 1}^{N} \chi(a)a</m>.
+    </p>
+    <p>
+      This is since if we consider <m>F(s) = \sum_{n = 1}^{\infty} a_nn^{-s}</m> converges for <m>\text{Re}(s) > 0</m> and <m>A(x) = \sum_{n \leq x} a_n </m> then we have
+    </p>
+    <p>
+      <m>
+        \begin{aligned}
+        F(s) \amp= s \int_{1}^{\infty} A(x)x^{-s-1}dx \\
+        \amp= s \int_{1}^{\infty} (B - (A(x) - B))x^{-s-1} dx \\
+        \amp= B + \int_{1}^{\infty}(A(x) - B)x^{-s-1} dx
+        \end{aligned}
+      </m>
+    </p>
+    <p>
+      Now if we let <m>A(x)</m> to be <m>q</m>-periodic and we choose <m>B = \frac{1}{N}\int_{0}^{N} A(x)dx</m> then
+    </p>
+    <p>
+      <m>
+        \begin{align*}
+        F(0) \amp= B \\
+        \amp= \frac{1}{N} \int_{0}^{N} A(x)dx \\
+        \amp= \frac{1}{N} \sum_{a = 1}^{N} (N - a)a_n \\
+        \amp= \frac{1}{N} \sum_{a = 1}^{N} Na_n - \frac{1}{N}\sum_{a = 1}^{N} aa_n \\
+        \amp= -\frac{1}{N} \sum_{a = 1}^{N} aa_n \:\:\: (\text{due to periodicity})
+        \end{align*}
+      </m>
+    </p>
+    <p>
+      Following this we choose <m>F(s) = L(s,\chi)</m> and <m>a_n = \chi(n)</m> and using the above we get
+    </p>
+    <p>
+      <m>L(0,\chi) = -\frac{1}{N} \sum_{a = 1}^{N} a\chi(a)</m>
     </p>
   </subsection>
 
