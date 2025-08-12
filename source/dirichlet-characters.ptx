@@ -94,14 +94,18 @@
       , we end up with algebraic numbers.
     </p>
   </p>
-  We give a few examples
+  <subsection>
+    <title>An Important Example</title>
+    We give a few examples
   <p>
     For <m>\chi(-1) = -1</m>,
     <p>
       <m>L(\chi,0) = -\frac{1}{N}\sum_{a = 1}^{N} \chi(a)a</m>
     </p>
   </p>
-  Yet another example
+  </subsection>
+  <subsection>
+  <title>Another Example</title>
   <p>
     Let <m>p</m> be an odd prime, <m>\zeta_p</m> be primitive <m>p^{\text{th}}</m>-root of unity.
   </p>
@@ -109,8 +113,10 @@
     We know that
   </p> 
   <p>
-    <m>G = \text{Gal}(\mathbb{Q}(\zeta_p)/\mathbb{Q}) \equiv (\mathbb{Z}/m\mathbb{Z})^{\times}</m> where we have <m>\sigma \longmapsto a, \ni \sigma(\zeta_p) = \zeta_p^a</m>
+    <m>G = \text{Gal}(\mathbb{Q}(\zeta_p)/\mathbb{Q}) \cong (\mathbb{Z}/m\mathbb{Z})^{\times}</m> where we have <m>\sigma \longmapsto a, \ni \sigma(\zeta_p) = \zeta_p^a</m>
   </p>
+  </subsection>
+
   
 
 
