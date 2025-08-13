@@ -2,6 +2,19 @@
 
 <section xml:id="mod-forms" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Review of Modular Forms</title>
+  <p>
+    In this section we are going to review some basic facts about modular forms.
+  </p>
+  <p>
+    Let <m>\mathfrak{h}</m> denote the complex upper half plane. We let <m>\text{GL}_2^{+}(\mathbb{R})</m> act on <m>\mathfrak{h}</m>, where the action is given by <me>
+        g.z = \frac{az + b}{cz + d}, \:\: g = \begin{pmatrix}
+    a \amp b \\
+    c \amp d
+  \end{pmatrix}
+    </me>
+
+  </p>
+
 
   
 
