@@ -9,5 +9,8 @@
 
   <!-- include sections -->
   <xi:include href="./dirichlet-characters.ptx" />
+  
+  <!-- include sections -->
+  <xi:include href="./mod-forms.ptx" />
 
 </chapter>
