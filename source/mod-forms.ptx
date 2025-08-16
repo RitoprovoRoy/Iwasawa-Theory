@@ -5,15 +5,306 @@
   <p>
     In this section we are going to review some basic facts about modular forms.
   </p>
-  <p>
-    Let <m>\mathfrak{h}</m> denote the complex upper half plane. We let <m>\text{GL}_2^{+}(\mathbb{R})</m> act on <m>\mathfrak{h}</m>, where the action is given by <me>
-        g.z = \frac{az + b}{cz + d}, \:\: g = \begin{pmatrix}
-    a \amp b \\
-    c \amp d
-  \end{pmatrix}
-    </me>
 
-  </p>
+  <subsection xml:id="subsec-upper-half-plane">
+    <title>The upper half-plane</title>
+    <p>
+      By <m>SL_2</m> we will mean the group of <m>2 \times 2</m> matrices with determinant <m>1</m>. 
+    </p>
+    <p>
+      Let <m>\gamma = \begin{pmatrix}
+                        a \amp b \\
+                        c \amp d
+                    \end{pmatrix} \in \text{SL}_2(\mathbb{R}), z \in \mathbb{C} \setminus \{-\frac{d}{c}\}</m>, and let <m>\gamma.z = \frac{az + b}{cz + d}</m>, then
+                    <me>
+                      \text{Im}(\gamma.z) = \frac{ad - bc}{\lvert cz + d \rvert^2}\text{Im}(z) = \frac{\text{Im}(z)}{\lvert cz + d \rvert^2}
+
+                    </me>
+      We denote <m>\mathfrak{h} = \{z \mid \text{Im}(z) > 0\}</m> to be the upper half plane. It is stable under <m>z \mapsto \gamma.z</m> and we clearly have <m>(\gamma_1\gamma_2).z = \gamma_1.(\gamma_2.z)</m>.
+
+    </p>
+    <proposition>
+      <statement>
+        <p>
+          The transformation action <m>z \mapsto \gamma.z</m> defines a group action of <m>\text{SL}_2(\mathbb{R})</m> on <m>\mathfrak{h}</m>.
+        </p>
+      </statement>
+      <proof>
+        <p>
+          The proof is routine verification. 
+          <ol>
+            <li>
+              <p>
+                We have <m>\begin{pmatrix}
+                  1 \amp 0 \\
+                  0 \amp 1
+                  \end{pmatrix} . z = \frac{1 \cdot z + 0}{0 \cdot z + 1} = z
+                </m>
+                Hence the first property is verified.
+
+
+              </p>
+            </li>
+            <li>
+              <p>
+                Follows from the fact before the proposition by routine veritification.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </proof>
+    </proposition>
+    <proposition>
+      <statement>
+        <p>
+          <m>\frac{dx \wedge dy}{y^2}</m> is invariant under <m>\text{SL}_2(\mathbb{R})</m>
+        </p>
+      </statement>
+      <proof>
+        <p>
+          We have the required action as <m>\gamma.z = \frac{az + b}{cz + d}</m>, and so if we let <m>z = x + iy</m> and <m>z' = x' + iy'</m> the required transformation we have
+          <me>
+            y' = \frac{y}{(cx + d)^2 + c^2y^2}
+          </me>
+          Computing the Jacobian of the transformation we get that
+          <me>
+            J = \frac{1}{((cx + d)^2 + c^2y^2)^2}
+          </me>
+          Now the wedge product of the transform is 
+          <me>
+            dx' \wedge dy' = J \cdot dx \wedge dy = \frac{1}{((cx + d)^2 + c^2y^2)^2} \cdot dx \wedge dy
+          </me>
+          Now using the expression for <m>y'</m> we have 
+          <me>
+            \frac{dx' \wedge dy'}{(y')^2} = \frac{\frac{1}{((cx + d)^2 + c^2y^2)^2} \cdot dx \wedge dy}{\frac{y}{(cx + d)^2 + c^2y^2}^2} = \frac{dx \wedge dy}{y^2}
+          </me>
+          And hence the result follows.
+        </p>
+      </proof>
+    </proposition>
+    <definition>
+      <statement>
+        <p>
+          Let <m>f: \mathfrak{h} \to \mathbb{C}</m> be a meromorphic function and <m>\gamma = \begin{pmatrix}
+            a \amp b \\
+            c \amp d
+          \end{pmatrix} \in \text{SL}_2(\mathbb{R})</m>. If <m>k \in \mathbb{Z}</m>, we define the weight <m>k</m> action of <m>\text{SL}_2(\mathbb{R})</m> by
+          <me>
+            (f \mid_k \gamma)(z) = (cz + d)^{-k} f(\gamma.z)
+          </me>
+        </p>
+      </statement>
+    </definition>
+    <proposition>
+      <statement>
+        <p>
+          We have
+          <me>
+            (f \mid_k \gamma_1)\mid_k \gamma_2 = f \mid_k \gamma_1\gamma_2
+          </me>
+        </p>
+      </statement>
+      <proof>
+        <p>
+          We prove the following claim first
+          <claim>
+            <statement>
+              <p>
+                Let <m>\gamma \in \text{SL}_2(\mathbb{R})</m> and <m>z \in \mathfrak{h}</m> and let <m>j(\gamma,z) = cz + d</m>. Then we have
+                <me>
+                  j(\gamma_1\gamma_2,z) = j(\gamma_1,\gamma_2 z)j(\gamma_2,z)
+                </me>
+              </p>
+            </statement>
+            <proof>
+              <p>
+                Let <m>\gamma_1 = \begin{pmatrix}
+                  a_1 \amp b_1 \\
+                  c_1 \amp d_1
+                  \end{pmatrix}
+                </m>
+                and <m>\gamma_2 = \begin{pmatrix}
+                  a_2 \amp b_2 \\
+                  c_2 \amp d_2
+                \end{pmatrix}
+                </m>
+                then we have <m>j(\gamma_1\gamma_2,z) = (c_1a_2 + d_1c_2)z + (c_1b_2 + d_1d_2)</m>.
+                </p>
+                <p>
+                On the other hand we have <m>j(\gamma_1,\gamma_2z) = c_1(\frac{a_2z + b_2}{c_2z + d_2}) + d_1 = \frac{j(\gamma_1\gamma_2,z)}{j(\gamma_2,z)}</m>
+                </p>
+            </proof>
+          </claim>
+          We observe that 
+          <me>
+            (f \mid_k \gamma)(z) = j(\gamma,z)^{-k} f(\gamma.z)
+          </me>
+          Now using the claim and routine verification
+          <m>
+          \begin{align*}
+          (f \mid_k \gamma_1)\mid_k \gamma_2 \amp= j(\gamma_2,z)^{-k}(f \mid_k \gamma_1)(\gamma_2 z) \\
+          \amp= j(\gamma_2,z)^{-k}(j(\gamma_1,\gamma_2 z)^{-k} f(\gamma_1 \gamma_2 z)) \\
+          \amp=  f \mid_k \gamma_1 \gamma_2
+          \end{align*}
+          </m>
+      </p>  
+      </proof>
+    </proposition>
+  </subsection>
+  <subsection xml:id="subsec-def-mod-forms">
+    <title>Definition of modular forms</title>
+    <p>
+      We define modular forms as follows.
+    </p>
+    <definition>
+      <statement>
+        <p>
+          Let <m>\Gamma</m> be a subgroup of <m>\mathbb{SL}_2(\mathbb{Z})</m> of finite index, <m>\chi</m> is a finite order character of <m>\Gamma</m>(i.e <m>\chi(\Gamma) \in \mu_N</m>). <m>f: \mathfrak{h} \to \mathbb{C}</m> is modular form of weight <m>k</m>, character <m>\chi</m> for <m>\Gamma</m>, if:
+          <ol>
+            <li>
+              <p>
+                <m>f</m> is holomorphic on <m>\mathfrak{h}</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f \mid_k \gamma = \chi(\gamma)f</m>, if <m>\gamma \in \Gamma</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>f</m> is slowly increasing at infinity i.e <m>\forall \gamma \in \Gamma \setminus \text{SL}_2(\mathbb{Z}), \: \exists C(\gamma),r(\gamma) \ni \lvert f \mid_k \gamma(z) \rvert \leq y^{r(\gamma)}</m>, if <m>y \geq C(\gamma)</m>. 
+              </p>
+            </li>
+          </ol>       
+        </p>
+      </statement>
+    </definition>
+
+    <definition>
+      <statement>
+        <p>
+          <m>\Gamma</m> is a congruence subgroup if <m>\Gamma \supset \Gamma(N) = \text{Ker}(\text{SL}_2(\mathbb{Z}) \to \text{SL}_2(\mathbb{Z}/N\mathbb{Z}))</m> for some <m>N \in \mathbb{N}</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <example>
+      <p>
+      The group
+      <me>
+        \Gamma_0(N) = \{\begin{pmatrix}
+          a \amp b \\
+          c \amp d
+        \end{pmatrix} \in \text{SL}_2(\mathbb{Z}) \mid c \equiv 0 \mod N\}
+      </me>
+      is a congruence subgroup. This is since the natural map 
+      <m>
+        \begin{align*}
+        \text{SL}_2(\mathbb{Z}) \amp \to \text{SL}_2(\mathbb{Z}/N\mathbb{Z}) \\
+        g \amp \mapsto g \mod N
+        \end{align*}
+      </m>
+    </p>
+    <p>
+      has the kernel 
+      <me>
+        \{\begin{pmatrix}
+          a \amp b \\
+          c \amp d
+        \end{pmatrix} \equiv  \begin{pmatrix}
+          1 \amp 0 \\
+          0 \amp 1
+        \end{pmatrix} \mod N\}
+      </me>
+      which is clearly contained in <m>\Gamma_0(N)</m>.
+    </p>
+    </example>
+
+    <p>
+      Any character <m>\chi:(\mathbb{Z}/N\mathbb{Z})^{\times} \to \mathbb{C}^{\times}</m> extends to a congruence character
+      <me>
+        \chi_N: \Gamma_0(N) \to \mathbb{C}^{\times}, \:\: \chi(\begin{pmatrix}
+        a \amp b \\
+        c \amp d
+      \end{pmatrix}) \to \chi(d)
+      </me>
+    </p>
+    <p>
+      Let <m>M_k(\Gamma,\chi)</m> be the set of modular forms of weight <m>k</m>, character <m>\chi</m> for <m>\Gamma</m>. Then <m>M(k,\chi)</m> is a <m>\mathbb{C}</m>-vector space.
+    </p>
+    <remark>
+      <p>
+        <ol>
+          <li>
+            <p>
+              If <m>\begin{pmatrix}
+                0 \amp -1 \\
+                -1 \amp 0
+                \end{pmatrix} = -I \in \Gamma
+              </m>
+              and <m>\chi(I) \neq (-1)^k</m>, then <m>M_k(\Gamma, \chi) = 0</m>
+            </p>
+          </li>
+          <li>
+            <p>
+              <m>f \in M_k(\Gamma, \chi), g \in \mathbb{SL}_2(\mathbb{Z}), f \mid_k g \in M_k(g\Gamma g, \chi_g)</m> where <m>\chi_g(\gamma) = \chi(g\gamma g^{-1})</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </remark>
+  </subsection>
+
+  <subsection xml:id="subsec-cusp-forms">
+    <title>Cusp forms</title>
+    <definition>
+      <statement>
+        <p>
+          <ol>
+            <li>
+              <p>
+                <m>v_{\infty} = \text{inf}\{ n \in \mathbb{Q} \mid a_n(f) \neq 0\} \geq 0</m> and we say that <m>f</m> has a zero of order <m>v_{\infty}(f)</m> at <m>\infty</m>. We say that <m>f</m> has a zero at <m>\infty</m> if <m>v_{\infty}(f) > 0</m>. 
+              </p>
+            </li>
+            <li>
+              <p>
+                A modular form <m>f</m> is a cusp form if <m>f \mid_k \gamma</m> has a zero at <m>\infty</m>, <m>\forall \gamma \in \Gamma \setminus \text{SL}_2(\mathbb{Z})</m>. We denote <m>S_k</m> be the set of cusp forms of weight <m>k</m>. We clearly have <m>S_k(\Gamma,\chi) \subset M_k(\Gamma,\chi)</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </definition>
+    <remark>
+      <p>
+        If <m>f</m> is a cusp form, then <m>f</m> is rapidly decreasing at <m>\infty</m> since
+        <me>
+          \lvert f \mid_{k} \gamma(z) \rvert = O(e^{-v_{\infty}(f \mid_k \gamma) 2\pi y})
+        </me>
+      </p>
+    </remark>
+    <p>
+      We present the following theorem without proof.
+    </p>
+    <theorem>
+      <statement>
+        <p>
+          <m>S_k(\Gamma,\chi)</m> and <m>M_k(\Gamma,\chi)</m> are finite-dimensional vector spaces over <m>\mathbb{C}</m>.
+        </p>
+      </statement>
+    </theorem>
+    <remark>
+      <p>
+        We have <m>\oplus_{k,\chi} M_k(\Gamma,\chi) = M(\Gamma)</m> and <m>\oplus_{k,\chi} S_k(\Gamma,\chi) = S(\Gamma)</m> are an algebra.
+      </p>
+    </remark>
+    <p>
+      From above, the study of <m> M_k(\Gamma,\chi) </m> for congruence subgroup and congruence characters (<m>\text{Ker}(\chi)</m> congruence subgroup) can be reduced to the study of <m>M_k(\Gamma_0(N),\chi_N)</m> for some <m>N</m>.
+    </p>
+  </subsection>
+
+
 
 
   
