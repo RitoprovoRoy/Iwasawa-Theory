@@ -6,7 +6,7 @@
 
   <book xml:id="iwasawa-theory">
     <title>Iwasawa Theory</title>
-    <subtitle>Lecture notes from 2006 course notes of Chris Skinner at University of Michigan.</subtitle>
+    <subtitle>Lecture notes from 2006 course by Chris Skinner at University of Michigan.</subtitle>
 
     <!-- Include frontmatter -->
     <xi:include href="./frontmatter.ptx" />

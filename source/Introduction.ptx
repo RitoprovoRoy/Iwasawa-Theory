@@ -13,4 +13,7 @@
   <!-- include sections -->
   <xi:include href="./mod-forms.ptx" />
 
+  <!-- include sections -->
+  <xi:include href="./L-functions.ptx" />
+
 </chapter>

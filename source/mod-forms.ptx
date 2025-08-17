@@ -302,7 +302,35 @@
     <p>
       From above, the study of <m> M_k(\Gamma,\chi) </m> for congruence subgroup and congruence characters (<m>\text{Ker}(\chi)</m> congruence subgroup) can be reduced to the study of <m>M_k(\Gamma_0(N),\chi_N)</m> for some <m>N</m>.
     </p>
-    
+    <example>
+      <title>The case of <m>\Gamma = \text{SL}_2(\mathbb{Z})</m></title>
+      <theorem>
+        <statement>
+          <p>
+            The matrices <m>S = \begin{pmatrix}
+              0 \amp -1 \\
+              1 \amp 0
+            \end{pmatrix}</m> and <m>T = \begin{pmatrix}
+              1 \amp 1 \\
+              0 \amp 1
+            \end{pmatrix}</m> generate the group <m>\Gamma = \text{SL}_2(\mathbb{Z})</m>.
+          </p>
+        </statement>
+        <proof>
+          <p>
+            We observe by induction that
+            <me>
+              T^n = \begin{pmatrix}
+              1 \amp n \\
+              0 \amp 1
+              \end{pmatrix}
+            </me>
+            for any <m>n \in \mathbb{Z}</m>
+          </p>
+        </proof>
+      </theorem>
+      
+    </example>
   </subsection>
 
 

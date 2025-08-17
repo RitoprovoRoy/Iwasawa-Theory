@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="L-functions" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>L-Functions</title>
+  <p>
+    Let <m>f \in M_k(\Gamma_1(N))</m> and 
+    <me>
+        f = \sum_{n = 0}^{\infty} a_n(f)q^n
+    </me>
+    The associated L-function is
+    <me>
+        L(f,s) = \sum_{n = 1}^{\infty} \frac{a_n(f)}{n^s}
+    </me>
+    the series converges for <m>\text{Re}(s) >> 0</m> since <m>a_n(f) = O(n^{k + \epsilon})</m>. Also this gives us a complex analytic function in some half plane.
+    <me>
+        \Lambda(s) = (\frac{2 \pi}{N})^{-s} \Gamma(s)L(f,s)
+    </me>
+    This has interesting properties
+    <ol>
+        <li>
+            <p>
+                This has an analytic continuation to all of <m>\mathbb{C}</m> if <m>f \in \S_k(\Gamma_1(N))</m> and a meromorphic continuation to <m>\mathbb{C}</m> in general with respect to the only possible poles being at <m>s = k,0</m> for <m>-k \in \mathbb{N}</m>
+            </p>
+        </li>
+        <li>
+            <p>
+                The desired functional equation is
+                <me>
+                    \Lambda(f,s) = i^k\Lambda(g,k-s)
+                </me>
+                where <m>g = f \mid_k w_N \: (g \in M_k(\Gamma_1(N)))</m> and <m>w_N = \begin{pmatrix}
+                    0 \amp -1 \\
+                    N \amp 0
+                \end{pmatrix}
+                </m>
+
+            </p>
+        </li>
+    </ol>
+    Suppose <m>f</m> is a simultaneous eigenform for all <m>T_n</m>'s. Then we have,
+    <ol>
+        <li>
+            <p>
+                <m>a_1(f) \neq 0</m> (so, let's assume <m>a_1(f) = 1</m>)
+            </p>
+        </li>
+        <li>
+            <p>
+                <m>L(f,s) = \prod_{l \nmid N} (1 - a_l(f)l^{-s} + \chi(l)l^{k - 1 - 2s})^{-1} \prod_{l \mid N} (1 - a_l(f)l^{-s})^{-1}</m>
+            </p>
+        </li>
+    </ol>
+  </p>
+      <theorem>
+        <statement>
+            <p>
+                Let <m>f \in S_k(N,\chi)</m> be a new-form of weight <m>k</m> and level <m>N</m> then
+                <me>
+                    g = f \mid_k w_N = c_f . f_p
+                </me>
+                where <m>c_f \in \mathbb{C}</m> is constant and <m>f_p = \sum_{n = 1}^{\infty} \overline{a_n(f)}q^n</m>. Moreover <m>f_p</m> is a new-form.
+            </p>
+        </statement>
+    </theorem>
+
+</section>
