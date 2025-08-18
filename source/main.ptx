@@ -13,9 +13,7 @@
 
     <!-- Include chapters -->
     <xi:include href="./Introduction.ptx" />
-
-    <!-- Include chapters -->
-    <xi:include href="./gal-rep-eigen.ptx" />
+    <xi:include href="./gal-rep.ptx" />
 
     <!-- Include backmatter -->
     <xi:include href="./backmatter.ptx" />
