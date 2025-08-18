@@ -5,6 +5,32 @@
   <p>
     In this chapter we discuss Galois representations associated to eigenforms. Eigenforms are a special class of modular forms that have particularly nice properties and are closely related to Galois representations.
   </p>
+  <p>
+    Suppose <m>f \in S_k(N,\chi)</m> be a normalised simultaeneous eigenform:
+    <me>
+      f = \sum_{n = 1}^{\infty} a_n(f)q^n \:\:\:\:\: (q = e^{2 \pi i z})
+    </me>
+    where <m>a_(f) = 1</m> and <m>T_l(f) = a_l(f)f</m>.
+  </p>
+  <p>
+    Our main goal is to explain
+    <ol>
+      <li>
+        <p>
+          <m>\exists</m> a number field <m>K_f</m> such that <m>a_l(f) \in K_f, \:\: \forall l</m>
+        </p>
+      </li>
+      <li>
+        <p>
+          Fix <m>\overline{\mathbb{Q}} \hookrightarrow \overline{\mathbb{Q}}_p</m> for any prime <m>p</m>. Then <m>\exists</m> a continuous representation
+          <me>
+            \rho_{f,p} = \text{Gal}(\overline{\mathbb{Q}}/\mathbb{Q}) \to \text{GL}_2(\overline{\mathbb{Q}}_p)
+          </me>
+          
+        </p>
+      </li>
+    </ol>
+  </p>
 
   
 
