@@ -26,10 +26,52 @@
           <me>
             \rho_{f,p} = \text{Gal}(\overline{\mathbb{Q}}/\mathbb{Q}) \to \text{GL}_2(\overline{\mathbb{Q}}_p)
           </me>
-          
+          where <m>\text{GL}_2(\overline{\mathbb{Q}}_p)</m> gets the topological group and <m>\text{Gal}(\overline{\mathbb{Q}}/\mathbb{Q})</m> is profinite, and hence get's the Krull topology, i.e this map is a continuous homomorphism of topological groups such that
+          <ol>
+            <li>
+              <p>
+                <m>\rho_{f,p}</m> is unramified at all <m>l \nmid N_p</m>(action of inertia group at <m>l</m> is trivial)
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\text{det}\rho_{f,p}(\text{Frob}_l) = \chi(l)l^{k - 1}</m>; <m>l \nmid N_p</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\text{Tr}\rho_{f,p}(\text{Frob}_l) = a_l(f)</m>; <m>l \nmid N_p</m>
+              </p>
+            </li>
+            <li>
+              <p>
+                <m>\rho_{f,p}</m> is irreducible.
+              </p>
+            </li>
+          </ol>
         </p>
       </li>
     </ol>
+  </p>
+
+  <subsection xml:id="review-inertia-frob">
+    <title>Review of Inertia and Frobenius Actions</title>
+    <p>
+      In this subsection, we will review the concepts of Inertia group and Frobenius actions in the context of Galois representations. 
+    </p>
+    <p>
+      Fix <m>\overline{\mathbb{Q}} \hookrightarrow \overline{\mathbb{Q}}_l</m>. We thus have <m>D_l = \text{Gal}(\overline{\mathbb{Q}}_l/\mathbb{Q}_l) \to \text{Gal}(\overline{\mathbb{Q}}/\mathbb{Q})</m>. Then we have the following exact sequence
+      <me>
+        1 \to I_l \to D_l \to D_l/I_l \cong \hat{\mathbb{Z}} \to 1
+      </me>
+      The topological generator of <m>D_l/I_l \cong \hat{\mathbb{Z}}</m> is called the Frobenius element and denoted by <m>\text{Frob}_l</m>. This gives a factorisation of the map <m>\text{Gal}(\overline{\mathbb{Q}}/\mathbb{Q}) \to \text{GL}_2(\overline{\mathbb{Q}}_p)</m>, hence talking about the Frobenius makes sense.
+      
+      
+    </p>
+  </subsection>
+
+  <p>
+    The above points <m>(1)</m> and <m>(2)</m> comes from connections between modular forms and geometry (more precisely cohomology). 
   </p>
 
   
