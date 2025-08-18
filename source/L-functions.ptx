@@ -58,9 +58,20 @@
                 <me>
                     g = f \mid_k w_N = c_f . f_p
                 </me>
-                where <m>c_f \in \mathbb{C}</m> is constant and <m>f_p = \sum_{n = 1}^{\infty} \overline{a_n(f)}q^n</m>. Moreover <m>f_p</m> is a new-form.
+                where <m>c_f \in \mathbb{C}</m> is constant and <m>f_p = \sum_{n = 1}^{\infty} \overline{a_n(f)}q^n</m>. Moreover <m>f_p</m> is a new-form (of weight <m>k</m>, level <m>N</m> and character <m>\chi</m>)
             </p>
         </statement>
     </theorem>
+    <p>
+        So the functional equation becomes
+        <me>
+            \Lambda(f,s) = w(f)\Lambda(f_p,k-s)
+        </me>
+        where <m>w(f) = i^k c_f</m>. 
+    </p>
+    <p>
+        We notice that if all the <m>a_n(f) \in \mathbb{R}</m>, then <m>f = f_p</m>.
+    </p>
+    
 
 </section>
